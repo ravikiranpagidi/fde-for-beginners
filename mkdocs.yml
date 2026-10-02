@@ -1,0 +1,55 @@
+site_name: FDE for Beginners
+site_description: Learn Forward Deployed Engineering through customer problems and engineering evidence.
+docs_dir: docs
+site_dir: site
+strict: true
+theme:
+  name: material
+  font: false
+  features:
+    - navigation.sections
+    - content.code.copy
+plugins:
+  - search
+hooks:
+  - scripts/docs_hook.py
+watch:
+  - README.md
+  - START_HERE.md
+  - ROADMAP.md
+  - CONTRIBUTING.md
+  - CODE_OF_CONDUCT.md
+  - SECURITY.md
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+validation:
+  links:
+    not_found: warn
+    anchors: warn
+    unrecognized_links: warn
+nav:
+  - Home: README.md
+  - Start here: START_HERE.md
+  - Learning paths:
+      - Choose your path: docs/learning-paths/choose-your-path.md
+      - Skills matrix: docs/learning-paths/skills-matrix.md
+      - Progress tracker: docs/learning-paths/progress-tracker.md
+  - Foundations:
+      - What is FDE?: docs/foundations/what-is-fde.md
+      - FDE lifecycle: docs/foundations/fde-lifecycle.md
+  - Field practice:
+      - Customer discovery: docs/field/customer-discovery.md
+      - Problem framing: docs/field/problem-framing.md
+      - Solution design: docs/field/solution-design.md
+      - Production reality: docs/field/production-reality.md
+  - Roadmap: ROADMAP.md
+  - References: docs/references.md
+  - Contributing: CONTRIBUTING.md
+  - Code of conduct: CODE_OF_CONDUCT.md
+  - Security: SECURITY.md
