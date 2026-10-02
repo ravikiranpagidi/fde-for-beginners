@@ -1,0 +1,10 @@
+name: Learning improvement
+description: Propose a specific improvement to learner evidence or engineering judgment.
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Learner problem and proposed evidence
+      description: What decision or implementation becomes easier? Identify the existing page and release scope.
+    validations:
+      required: true
