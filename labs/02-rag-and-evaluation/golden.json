@@ -1,0 +1,162 @@
+[
+  {
+    "question": "What is the return window with a receipt?",
+    "expected_documents": [
+      "returns-current"
+    ],
+    "expected_facts": [
+      "30 days"
+    ],
+    "should_abstain": false,
+    "audience": "retail",
+    "category": "direct"
+  },
+  {
+    "question": "What is the business return window with a receipt?",
+    "expected_documents": [
+      "business-returns"
+    ],
+    "expected_facts": [
+      "14 days"
+    ],
+    "should_abstain": false,
+    "audience": "business",
+    "category": "metadata"
+  },
+  {
+    "question": "When should I report damaged items?",
+    "expected_documents": [
+      "damaged"
+    ],
+    "expected_facts": [
+      "7 days",
+      "photos"
+    ],
+    "should_abstain": false,
+    "audience": "retail",
+    "category": "direct"
+  },
+  {
+    "question": "How long does standard shipping delivery take?",
+    "expected_documents": [
+      "shipping"
+    ],
+    "expected_facts": [
+      "5 business days"
+    ],
+    "should_abstain": false,
+    "audience": "retail",
+    "category": "direct"
+  },
+  {
+    "question": "What are exchanges for unopened items?",
+    "expected_documents": [
+      "exchanges"
+    ],
+    "expected_facts": [
+      "45 days"
+    ],
+    "should_abstain": false,
+    "audience": "retail",
+    "category": "similar_policy"
+  },
+  {
+    "question": "What does the warranty cover for manufacturing defects?",
+    "expected_documents": [
+      "warranty"
+    ],
+    "expected_facts": [
+      "12 months"
+    ],
+    "should_abstain": false,
+    "audience": "retail",
+    "category": "direct"
+  },
+  {
+    "question": "Who reviews policy exceptions before promising a refund?",
+    "expected_documents": [
+      "escalation"
+    ],
+    "expected_facts": [
+      "supervisor"
+    ],
+    "should_abstain": false,
+    "audience": "retail",
+    "category": "direct"
+  },
+  {
+    "question": "Who pays international customs fees?",
+    "expected_documents": [
+      "international"
+    ],
+    "expected_facts": [
+      "recipient"
+    ],
+    "should_abstain": false,
+    "audience": "retail",
+    "category": "direct"
+  },
+  {
+    "question": "What is the retail return window today?",
+    "expected_documents": [
+      "returns-current"
+    ],
+    "expected_facts": [
+      "30 days"
+    ],
+    "should_abstain": false,
+    "audience": "retail",
+    "category": "stale"
+  },
+  {
+    "question": "What is the return window with a receipt?",
+    "expected_documents": [
+      "returns-current",
+      "business-returns"
+    ],
+    "expected_facts": [],
+    "should_abstain": true,
+    "audience": "all",
+    "category": "ambiguous"
+  },
+  {
+    "question": "Can you promise my refund?",
+    "expected_documents": [],
+    "expected_facts": [],
+    "should_abstain": true,
+    "audience": "retail",
+    "category": "insufficient_evidence"
+  },
+  {
+    "question": "Do you sell lunar insurance?",
+    "expected_documents": [],
+    "expected_facts": [],
+    "should_abstain": true,
+    "audience": "retail",
+    "category": "unsupported"
+  },
+  {
+    "question": "How long can I send my purchase back?",
+    "expected_documents": [
+      "returns-current"
+    ],
+    "expected_facts": [
+      "30 days"
+    ],
+    "should_abstain": false,
+    "audience": "retail",
+    "category": "vocabulary_mismatch"
+  },
+  {
+    "question": "Can exchanges extend the refund return window?",
+    "expected_documents": [
+      "exchanges"
+    ],
+    "expected_facts": [
+      "do not extend"
+    ],
+    "should_abstain": false,
+    "audience": "retail",
+    "category": "similar_policy"
+  }
+]

@@ -11,9 +11,18 @@ Copy this page into your personal notes. Record evidence and feedback, not just 
 | Readiness | Evidence locations, launch blockers, rollback and support owners | Not started | Rehearse an incident response |
 | Local contribution setup | Actual lint, test, and docs-build output | Not started | Resolve setup failures |
 
-## Later milestones, currently unavailable
+## Phase 2 engineering evidence
 
-Do not mark these complete from reading the roadmap: three tested lab implementations, an integrated Northstar project with evaluation and approved writes, and the Atlas engagement/incident artifacts. They will be added in Phases 2 and 3. This tracker does not certify production experience.
+- [ ] Reliable API integration passes failure-mode tests.
+- [ ] Idempotency and conflicting-payload tests pass.
+- [ ] RAG evaluation report produced and denominators explained.
+- [ ] One retrieval failure analyzed without changing the expected label.
+- [ ] MCP unapproved and invalidly approved writes rejected.
+- [ ] MCP explicitly approved write succeeds; replay fails.
+- [ ] One [ADR](../../templates/architecture-decision-record.md) completed.
+- [ ] One [readiness checklist](../../templates/production-readiness-checklist.md) completed with limitations.
+
+The integrated Northstar project and Atlas engagement/incident artifacts remain deferred to Phase 3. This tracker does not certify production experience.
 
 ## Record one decision
 

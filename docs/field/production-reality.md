@@ -40,7 +40,7 @@ Copy the table into your engagement notes. For each row, record evidence locatio
 | Launch criteria | Thresholds and blockers were agreed before evaluation; sign-off references evidence |
 | Adoption/handoff | Users know limitations; ownership and feedback review continue after launch |
 
-This is a review aid, not a certification or a replacement for customer-specific requirements. The separate field-template set is planned for Phase 2.
+This is a review aid, not a certification or a replacement for customer-specific requirements. The reusable [readiness template](../../templates/production-readiness-checklist.md) now accompanies this guide.
 
 ## Observability that answers questions
 
