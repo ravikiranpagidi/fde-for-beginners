@@ -20,6 +20,8 @@ watch:
   - CONTRIBUTING.md
   - CODE_OF_CONDUCT.md
   - SECURITY.md
+  - labs
+  - templates
 markdown_extensions:
   - admonition
   - pymdownx.highlight
@@ -48,6 +50,19 @@ nav:
       - Problem framing: docs/field/problem-framing.md
       - Solution design: docs/field/solution-design.md
       - Production reality: docs/field/production-reality.md
+  - Labs:
+      - Reliable API Integration: labs/01-reliable-api-integration/README.md
+      - RAG and Evaluation: labs/02-rag-and-evaluation/README.md
+      - MCP and Safe Tools: labs/03-mcp-safe-tools/README.md
+  - Field templates:
+      - Discovery questionnaire: templates/discovery-questionnaire.md
+      - Problem and success metrics: templates/problem-statement-and-success-metrics.md
+      - Technical design: templates/technical-design.md
+      - Architecture decision: templates/architecture-decision-record.md
+      - Evaluation plan: templates/evaluation-plan.md
+      - Production readiness: templates/production-readiness-checklist.md
+      - Rollout and handoff: templates/rollout-and-handoff.md
+      - Postmortem: templates/postmortem.md
   - Roadmap: ROADMAP.md
   - References: docs/references.md
   - Contributing: CONTRIBUTING.md

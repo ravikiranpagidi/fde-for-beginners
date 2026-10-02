@@ -1,4 +1,4 @@
-"""Shared learning package. Lab implementations arrive in Phase 2."""
+"""Shared engineering components for three local FDE learning labs."""
 
 from importlib.metadata import version
 

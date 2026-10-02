@@ -7,7 +7,7 @@ from urllib.parse import unquote, urlsplit
 
 import markdown
 from mkdocs.config import load_config
-from mkdocs.structure.files import Files
+from mkdocs.structure.files import Files, InclusionLevel
 
 import fde_beginners
 
@@ -19,6 +19,8 @@ def authored_pages() -> list[Path]:
         [
             *ROOT.glob("*.md"),
             *(ROOT / "docs").rglob("*.md"),
+            *(ROOT / "labs").rglob("*.md"),
+            *(ROOT / "templates").rglob("*.md"),
             *(ROOT / ".github").rglob("*.md"),
         ]
     )
@@ -52,11 +54,11 @@ def test_source_links_resolve_inside_repository() -> None:
 
 def test_authored_text_avoids_forbidden_dashes() -> None:
     paths = authored_pages()
-    for directory in ("src", "scripts", "tests", ".github"):
+    for directory in ("src", "scripts", "tests", ".github", "labs"):
         paths.extend(
             path
             for path in (ROOT / directory).rglob("*")
-            if path.suffix in {".py", ".yml", ".yaml"}
+            if path.suffix in {".py", ".yml", ".yaml", ".json"}
         )
     paths.extend(ROOT / name for name in ("pyproject.toml", "mkdocs.yml", ".env.example"))
     failures = [
@@ -83,6 +85,8 @@ def test_documentation_hook_preserves_source_paths() -> None:
     assert {file.src_uri for file in files} == expected
     for file in files:
         assert Path(file.abs_src_path).read_bytes() == (ROOT / file.src_uri).read_bytes()
+        if file.src_uri.endswith(".md"):
+            assert file.inclusion == InclusionLevel.INCLUDED
 
 
 def test_navigation_covers_all_learning_pages() -> None:

@@ -4,13 +4,13 @@ This is a release plan, not a claim that planned material exists. New topics mus
 
 ## v0.1: Field foundations and local delivery
 
-### Phase 1: Foundation (current review checkpoint)
+### Phase 1: Foundation (complete)
 
-Six core guides, three navigation guides, references, root policies, Python packaging, locked dependencies, Ruff, pytest, CI, and MkDocs. The checkpoint requires actual local validation and reviewer feedback before Phase 2.
+Six core guides, three navigation guides, references, root policies, Python packaging, locked dependencies, Ruff, pytest, CI, and MkDocs. Merged after local and GitHub CI validation.
 
-### Phase 2: Three labs and eight field templates (not implemented)
+### Phase 2: Three labs and eight field templates (current checkpoint)
 
-Exactly three labs: Reliable API Integration, RAG and Evaluation, and MCP and Safe Tool Execution. One shared LLM provider protocol and deterministic mock will serve the AI workflows. Verify the official MCP Python SDK's current stable API before implementation.
+Exactly three labs: Reliable API Integration, RAG and Evaluation, and MCP and Safe Tool Execution. One shared LLM provider protocol and deterministic mock serve the AI workflow. The MCP lab uses the verified official stable v2 SDK. Approval denial and success are tested over the actual protocol.
 
 Exactly eight templates: discovery questionnaire; problem statement and success metrics; technical design; architecture decision record; evaluation plan; production readiness checklist; rollout and handoff; postmortem.
 

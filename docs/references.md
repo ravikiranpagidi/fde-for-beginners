@@ -18,4 +18,14 @@ These first-party sources support the curriculum's framing and tooling. Access d
 
 Separate source claims from engineering judgment. A company's role description can show how that company organizes work; it cannot prove salary ranges, hiring bars, interview loops, or industry-wide preferences. A documentation page can define an API; it cannot prove our code works. That requires recorded validation against the actual implementation.
 
-Before Phase 2, verify the current official MCP Python SDK documentation and stable release API. MCP implementation is deliberately not part of this checkpoint.
+## Phase 2 implementation references
+
+Verified on **2026-10-02**:
+
+- [Official MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) and [stable SDK documentation](https://py.sdk.modelcontextprotocol.io/): v2 is the current stable line. The lab uses `MCPServer` and `Client`, with `mcp==2.2.0` resolved in the lockfile, rather than older v1 FastMCP examples.
+- [MCP client transports](https://py.sdk.modelcontextprotocol.io/client/transports/) and [testing](https://py.sdk.modelcontextprotocol.io/get-started/testing/): in-process clients for behavior tests and stdio subprocesses for the real execution path.
+- [MCP structured output](https://py.sdk.modelcontextprotocol.io/servers/structured-output/): typed return schemas distinguish structured application results from text-only output. Actual behavior is covered by the protocol tests.
+- [FastAPI testing](https://fastapi.tiangolo.com/tutorial/testing/): local TestClient exercises service behavior without an external server. A separate loopback test covers actual timeout semantics.
+- [HTTPX timeouts](https://www.python-httpx.org/advanced/timeouts/): timeouts cover transport phases; they are not a single end-to-end deadline. The API lab states that limitation explicitly.
+
+BM25 and extractive mock behavior are implemented directly in the repository and tested with synthetic fixtures. No source claims that these lab results establish production answer quality. Approval storage is an application-level educational control, not a guarantee supplied by MCP.

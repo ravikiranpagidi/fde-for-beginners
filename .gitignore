@@ -7,6 +7,7 @@ __pycache__/
 dist/
 build/
 site/
+.fde-lab/
 .env
 .env.*
 !.env.example

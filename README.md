@@ -45,17 +45,19 @@ The [lifecycle guide](docs/foundations/fde-lifecycle.md) makes each transition a
 
 | Experience | Outcome | Current status |
 | --- | --- | --- |
-| Reliable API Integration | Handle retries, validation, timeouts, and duplicate writes | Planned, Phase 2 |
-| RAG and Evaluation | Retrieve synthetic policies and evaluate grounding and abstention | Planned, Phase 2 |
-| MCP and Safe Tool Execution | Separate reads from code-enforced approved writes | Planned, Phase 2 |
+| [Reliable API Integration](labs/01-reliable-api-integration/README.md) | Handle retries, validation, timeouts, and duplicate writes | Runnable |
+| [RAG and Evaluation](labs/02-rag-and-evaluation/README.md) | Retrieve synthetic policies and evaluate grounding and abstention | Runnable |
+| [MCP and Safe Tool Execution](labs/03-mcp-safe-tools/README.md) | Separate reads from code-enforced approved writes | Runnable |
 | Northstar Support Copilot | Integrate customer, order, policy, and ticket workflows | Planned, Phase 3 |
 | Atlas Logistics engagement | Work through ambiguity, delivery, and a surprise incident | Planned, Phase 3 |
 
-These experiences are not implemented or labeled runnable yet. See the [roadmap and release gates](ROADMAP.md).
+The three labs run locally without keys or external runtime services. The project and simulation remain planned for Phase 3. See the [roadmap and release gates](ROADMAP.md).
+
+Use eight field templates to retain evidence: [discovery](templates/discovery-questionnaire.md), [problem and metrics](templates/problem-statement-and-success-metrics.md), [technical design](templates/technical-design.md), [ADR](templates/architecture-decision-record.md), [evaluation](templates/evaluation-plan.md), [readiness](templates/production-readiness-checklist.md), [rollout and handoff](templates/rollout-and-handoff.md), and [postmortem](templates/postmortem.md).
 
 ## Repository status
 
-**Phase 1 foundation, pre-release (`0.1.0.dev1`).** Available now: six core guides, learning navigation, repository policies, a locked Python development environment, tests, CI configuration, and MkDocs documentation. v0.1.0 is not complete.
+**Phase 2 engineering core, pre-release (`0.1.0.dev2`).** The foundation now connects to three labs, one shared deterministic AI provider, eight field templates, and behavior tests. v0.1.0 is not complete; the end-to-end project and engagement simulation are deferred.
 
 The Northstar Retail Support examples are fictional. Any exercise numbers are synthetic planning inputs, not measured customer outcomes. Atlas Logistics is reserved for the later simulation.
 

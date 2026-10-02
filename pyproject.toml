@@ -4,13 +4,25 @@ build-backend = "hatchling.build"
 
 [project]
 name = "fde-for-beginners"
-version = "0.1.0.dev1"
+version = "0.1.0.dev2"
 description = "A hands-on field guide for Forward Deployed Engineering"
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
 authors = [{name = "Ravi Kiran Pagidi"}]
-dependencies = []
+dependencies = [
+  "fastapi>=0.115,<1",
+  "httpx>=0.28,<1",
+  "pydantic>=2.11,<3",
+  "uvicorn>=0.34,<1",
+  "mcp>=2.2,<3",
+]
+
+[project.scripts]
+fde-api = "fde_beginners.integration.cli:main"
+fde-rag = "fde_beginners.rag.cli:main"
+fde-mcp = "fde_beginners.safe_tools.server:main"
+fde-mcp-demo = "fde_beginners.safe_tools.demo:main"
 
 [project.optional-dependencies]
 dev = [
