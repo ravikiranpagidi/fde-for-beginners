@@ -4,7 +4,7 @@ Learn Forward Deployed Engineering by solving realistic customer problems.
 
 **Discovery -> Design -> Build -> Integrate -> Evaluate -> Deploy -> Operate -> Productize**
 
-A practical field guide and, as v0.1 develops, a local lab environment and customer-engagement simulator. Start with a customer's workflow, build the smallest useful solution, and collect evidence that it works when dependencies fail.
+A runnable introduction to Forward Deployed Engineering through tested engineering labs, an integrated production-style project, and a staged customer engagement simulation. Start with a customer's workflow, build the smallest useful solution, and collect evidence that it works when dependencies fail.
 
 Forward Deployed Engineers work close to customers and own technical delivery across system boundaries. That includes software, data, APIs, applied AI, reliability, security, and communication. AI is one possible component, not the definition of the role.
 
@@ -48,18 +48,18 @@ The [lifecycle guide](docs/foundations/fde-lifecycle.md) makes each transition a
 | [Reliable API Integration](labs/01-reliable-api-integration/README.md) | Handle retries, validation, timeouts, and duplicate writes | Runnable |
 | [RAG and Evaluation](labs/02-rag-and-evaluation/README.md) | Retrieve synthetic policies and evaluate grounding and abstention | Runnable |
 | [MCP and Safe Tool Execution](labs/03-mcp-safe-tools/README.md) | Separate reads from code-enforced approved writes | Runnable |
-| Northstar Support Copilot | Integrate customer, order, policy, and ticket workflows | Planned, Phase 3 |
-| Atlas Logistics engagement | Work through ambiguity, delivery, and a surprise incident | Planned, Phase 3 |
+| [Northstar Support Copilot](project/northstar-support-copilot/README.md) | Integrate customer, order, policy, and approved ticket workflows | Runnable |
+| [Atlas Logistics engagement](simulation/atlas-logistics/README.md) | Discover, scope, respond to an incident, hand off, and productize | Staged exercise |
 
-The three labs run locally without keys or external runtime services. The project and simulation remain planned for Phase 3. See the [roadmap and release gates](ROADMAP.md).
+Learn the lifecycle -> practice three primitives -> build Northstar -> attempt Atlas -> respond to failure -> hand off -> productize. Labs and Northstar run locally without keys or external runtime services. Finish with the [field-readiness evidence review](docs/learning-paths/field-readiness-rubric.md). See the [roadmap and release gates](ROADMAP.md).
 
 Use eight field templates to retain evidence: [discovery](templates/discovery-questionnaire.md), [problem and metrics](templates/problem-statement-and-success-metrics.md), [technical design](templates/technical-design.md), [ADR](templates/architecture-decision-record.md), [evaluation](templates/evaluation-plan.md), [readiness](templates/production-readiness-checklist.md), [rollout and handoff](templates/rollout-and-handoff.md), and [postmortem](templates/postmortem.md).
 
 ## Repository status
 
-**Phase 2 engineering core, pre-release (`0.1.0.dev2`).** The foundation now connects to three labs, one shared deterministic AI provider, eight field templates, and behavior tests. v0.1.0 is not complete; the end-to-end project and engagement simulation are deferred.
+**Phase 3 field experience, checkpoint 3.** Three labs and eight templates now lead into one integrated project, one staged simulation, an evidence rubric, and a productization exercise. This remains a learning release with explicit production gaps; no certification or job-readiness guarantee is implied.
 
-The Northstar Retail Support examples are fictional. Any exercise numbers are synthetic planning inputs, not measured customer outcomes. Atlas Logistics is reserved for the later simulation.
+The Northstar Retail Support examples are fictional. Any exercise numbers are synthetic planning inputs, not measured customer outcomes. Atlas Logistics is also fictional.
 
 ## Contributing and author
 

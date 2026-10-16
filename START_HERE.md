@@ -9,7 +9,17 @@ Begin with a workflow, not a stack. At fictional Northstar Retail Support, repre
 3. Produce a one-paragraph [problem statement](docs/field/problem-framing.md), including a measurable outcome and a non-goal.
 4. Save your evidence in a personal copy of the [progress tracker](docs/learning-paths/progress-tracker.md). Keep assumptions separate from observations.
 
-You can do the foundation exercises without installing Python. Then follow [Reliable Integration](labs/01-reliable-api-integration/README.md) -> [RAG and Evaluation](labs/02-rag-and-evaluation/README.md) -> [Safe MCP Tools](labs/03-mcp-safe-tools/README.md). Experienced learners may jump directly to a lab after setup. The integrated project and simulation remain deferred to Phase 3.
+You can do the foundation exercises without installing Python. Then follow [Reliable Integration](labs/01-reliable-api-integration/README.md) -> [RAG and Evaluation](labs/02-rag-and-evaluation/README.md) -> [Safe MCP Tools](labs/03-mcp-safe-tools/README.md). Experienced learners may jump directly to a lab after setup. All tracks continue through Northstar, Atlas, and an evidence review.
+
+## Choose a track
+
+| Track | Route |
+| --- | --- |
+| Full learner | Foundations -> all three labs -> [Northstar](project/northstar-support-copilot/README.md) -> [Atlas](simulation/atlas-logistics/README.md) -> [field readiness](docs/learning-paths/field-readiness-rubric.md) |
+| Experienced engineer | [FDE lifecycle](docs/foundations/fde-lifecycle.md) -> Northstar -> Atlas -> field readiness; revisit labs where evidence is missing |
+| AI engineer | RAG lab -> MCP lab -> Northstar -> Atlas -> field readiness; use integration tests to verify reliability assumptions |
+
+Northstar runs with `uv run --offline fde-northstar assist`; generate its report with `uv run --offline fde-northstar evaluate`. Complete its approval and failure exercises before Atlas. Save each Atlas artifact before opening the next disclosure. Its reference stays separate and should be read last.
 
 ## Install the development environment
 

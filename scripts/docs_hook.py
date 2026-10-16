@@ -19,7 +19,7 @@ ROOT_PAGES = (
 def on_files(files: Files, config: MkDocsConfig) -> Files:
     """Keep relative links identical on GitHub and in the built site."""
     pages = [ROOT / name for name in ROOT_PAGES]
-    for folder in ("docs", "labs", "templates"):
+    for folder in ("docs", "labs", "templates", "project", "simulation"):
         pages.extend(sorted((ROOT / folder).rglob("*.md")))
     generated = Files(
         [

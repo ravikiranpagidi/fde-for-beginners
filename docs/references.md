@@ -29,3 +29,7 @@ Verified on **2026-10-02**:
 - [HTTPX timeouts](https://www.python-httpx.org/advanced/timeouts/): timeouts cover transport phases; they are not a single end-to-end deadline. The API lab states that limitation explicitly.
 
 BM25 and extractive mock behavior are implemented directly in the repository and tested with synthetic fixtures. No source claims that these lab results establish production answer quality. Approval storage is an application-level educational control, not a guarantee supplied by MCP.
+
+## Phase 3 compatibility check
+
+Rechecked the [official stable SDK overview](https://py.sdk.modelcontextprotocol.io/), [in-process testing](https://py.sdk.modelcontextprotocol.io/get-started/testing/), and [client transports](https://py.sdk.modelcontextprotocol.io/client/transports/) on **2026-10-15**. Northstar composes the installed `mcp==2.2.0` with `Client(server)` and structured tool results. The existing stdio lab remains intact. No protocol pin, transport upgrade, or new dependency was introduced. Payload-bound approval and action idempotency remain application controls, not SDK authorization features.

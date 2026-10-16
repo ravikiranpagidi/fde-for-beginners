@@ -21,7 +21,7 @@ An experienced engineer can skip explanatory reading, but should still produce a
 
 **Available now:** Start Here -> selected foundation guides -> discovery record -> success agreement -> scoped design -> readiness review.
 
-**Engineering practice now:** [Reliable API Integration](../../labs/01-reliable-api-integration/README.md) -> [RAG and Evaluation](../../labs/02-rag-and-evaluation/README.md) -> [MCP and Safe Tool Execution](../../labs/03-mcp-safe-tools/README.md). Northstar Support Copilot and Atlas Logistics remain deferred to Phase 3. See [ROADMAP](../../ROADMAP.md).
+**Engineering practice now:** [Reliable API Integration](../../labs/01-reliable-api-integration/README.md) -> [RAG and Evaluation](../../labs/02-rag-and-evaluation/README.md) -> [MCP and Safe Tool Execution](../../labs/03-mcp-safe-tools/README.md). Continue to [Northstar Support Copilot](../../project/northstar-support-copilot/README.md), then [Atlas Logistics](../../simulation/atlas-logistics/README.md), and the [field-readiness rubric](field-readiness-rubric.md). See [ROADMAP](../../ROADMAP.md).
 
 Software engineers may spend more time on discovery, AI engineers on reliability, and architects on implementation. All paths converge on the same end-to-end evidence: problem, constraints, decisions, implementation, validation, outcome, and lessons.
 

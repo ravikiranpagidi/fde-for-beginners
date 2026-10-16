@@ -24,7 +24,16 @@ from fde_beginners.safe_tools.approval import (
 logger = logging.getLogger(__name__)
 
 
-def create_server(store: ApprovalStore, *, fail_writes: bool = False) -> MCPServer:
+def create_server(
+    store: ApprovalStore,
+    *,
+    fail_writes: bool = False,
+    customers: dict | None = None,
+    orders: dict | None = None,
+    restricted: frozenset[str] = frozenset(),
+) -> MCPServer:
+    customers = CUSTOMERS if customers is None else customers
+    orders = ORDERS if orders is None else orders
     server = MCPServer("Northstar safe tools")
     retrieval = Retriever(load_documents())
 
@@ -76,8 +85,9 @@ def create_server(store: ApprovalStore, *, fail_writes: bool = False) -> MCPServ
             text = require_text(query)
             matches = [
                 c
-                for c in CUSTOMERS.values()
-                if text.lower() in c["name"].lower() or text == c["customer_id"]
+                for key, c in customers.items()
+                if key not in restricted
+                and (text.lower() in c.get("name", "").lower() or text == c["customer_id"])
             ]
             if not matches:
                 raise LookupError()
@@ -91,9 +101,11 @@ def create_server(store: ApprovalStore, *, fail_writes: bool = False) -> MCPServ
 
         def run() -> dict:
             identifier = require_text(order_id)
-            if identifier not in ORDERS:
+            if identifier not in orders:
                 raise LookupError()
-            return ORDERS[identifier]
+            if orders[identifier]["customer_id"] in restricted:
+                raise LookupError()
+            return orders[identifier]
 
         return audited("lookup_order", "READ", "not_required", run)
 
@@ -119,13 +131,16 @@ def create_server(store: ApprovalStore, *, fail_writes: bool = False) -> MCPServ
         customer_id: str,
         summary: str,
         approval_token: str | None = None,
+        action_id: str | None = None,
     ) -> dict[str, object]:
         """WRITE: requires one-time operator approval bound to this exact ticket."""
 
         def run() -> dict:
-            request = TicketRequest(customer_id=customer_id, summary=summary)
-            if request.customer_id not in CUSTOMERS:
+            request = TicketRequest(customer_id=customer_id, summary=summary, action_id=action_id)
+            if request.customer_id not in customers:
                 raise LookupError()
+            if request.customer_id in restricted:
+                raise ApprovalRequired("Customer outside the local pilot")
             return store.execute(request, approval_token, fail=fail_writes)
 
         return audited("create_support_ticket", "WRITE", "valid_consumed", run)

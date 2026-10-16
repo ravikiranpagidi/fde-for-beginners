@@ -22,6 +22,8 @@ watch:
   - SECURITY.md
   - labs
   - templates
+  - project
+  - simulation
 markdown_extensions:
   - admonition
   - pymdownx.highlight
@@ -54,6 +56,17 @@ nav:
       - Reliable API Integration: labs/01-reliable-api-integration/README.md
       - RAG and Evaluation: labs/02-rag-and-evaluation/README.md
       - MCP and Safe Tools: labs/03-mcp-safe-tools/README.md
+  - End-to-end project:
+      - Northstar Support Copilot: project/northstar-support-copilot/README.md
+  - Field simulation:
+      - Atlas - begin here: simulation/atlas-logistics/README.md
+      - Stage 2 - open after discovery: simulation/atlas-logistics/02-discovery-and-scope.md
+      - Stage 3 - open after scope: simulation/atlas-logistics/03-constraints-and-design.md
+      - Stage 4 - open after design: simulation/atlas-logistics/04-incident.md
+      - Stage 5 - open after incident: simulation/atlas-logistics/05-handoff.md
+  - Field readiness:
+      - Evidence rubric and pack: docs/learning-paths/field-readiness-rubric.md
+      - Productization exercise: docs/field/productization.md
   - Field templates:
       - Discovery questionnaire: templates/discovery-questionnaire.md
       - Problem and success metrics: templates/problem-statement-and-success-metrics.md
@@ -63,6 +76,8 @@ nav:
       - Production readiness: templates/production-readiness-checklist.md
       - Rollout and handoff: templates/rollout-and-handoff.md
       - Postmortem: templates/postmortem.md
+  - Reference solution (after completing tasks):
+      - Atlas spoilers: simulation/atlas-logistics/reference-solution.md
   - Roadmap: ROADMAP.md
   - References: docs/references.md
   - Contributing: CONTRIBUTING.md

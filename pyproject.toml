@@ -19,6 +19,7 @@ dependencies = [
 ]
 
 [project.scripts]
+fde-northstar = "fde_beginners.northstar.cli:main"
 fde-api = "fde_beginners.integration.cli:main"
 fde-rag = "fde_beginners.rag.cli:main"
 fde-mcp = "fde_beginners.safe_tools.server:main"
