@@ -1,0 +1,348 @@
+[
+  {
+    "name": "retail-return",
+    "category": "straightforward",
+    "request": {},
+    "expected_state": "drafted",
+    "expected_systems": [
+      "customer",
+      "order",
+      "tickets",
+      "policy"
+    ],
+    "expected_documents": [
+      "returns-current"
+    ],
+    "expected_fact": "30 days",
+    "expected_attempts": 1,
+    "expected_error": null,
+    "write": "none"
+  },
+  {
+    "name": "business-return",
+    "category": "straightforward",
+    "request": {
+      "customer_id": "C004",
+      "order_id": "O103"
+    },
+    "expected_state": "drafted",
+    "expected_systems": [
+      "customer",
+      "order",
+      "tickets",
+      "policy"
+    ],
+    "expected_documents": [
+      "business-returns"
+    ],
+    "expected_fact": "14 days",
+    "expected_attempts": 1,
+    "expected_error": null,
+    "write": "none"
+  },
+  {
+    "name": "unknown-audience",
+    "category": "policy_ambiguity",
+    "request": {
+      "customer_id": "C018",
+      "order_id": "O117"
+    },
+    "expected_state": "abstained",
+    "expected_systems": [
+      "customer",
+      "order",
+      "tickets",
+      "policy"
+    ],
+    "expected_documents": [],
+    "expected_fact": null,
+    "expected_attempts": 1,
+    "expected_error": null,
+    "write": "none"
+  },
+  {
+    "name": "missing-customer",
+    "category": "missing_customer",
+    "request": {
+      "customer_id": "C099"
+    },
+    "expected_state": "abstained",
+    "expected_systems": [
+      "customer"
+    ],
+    "expected_documents": [],
+    "expected_fact": null,
+    "expected_attempts": null,
+    "expected_error": null,
+    "write": "none"
+  },
+  {
+    "name": "missing-order",
+    "category": "missing_order",
+    "request": {
+      "order_id": "O999"
+    },
+    "expected_state": "degraded",
+    "expected_systems": [
+      "customer",
+      "order"
+    ],
+    "expected_documents": [],
+    "expected_fact": null,
+    "expected_attempts": 1,
+    "expected_error": "http_404",
+    "write": "none"
+  },
+  {
+    "name": "stale-policy",
+    "category": "stale_policy",
+    "request": {
+      "fault": "stale_policy"
+    },
+    "expected_state": "abstained",
+    "expected_systems": [
+      "customer",
+      "order",
+      "tickets",
+      "policy"
+    ],
+    "expected_documents": [
+      "returns-current"
+    ],
+    "expected_fact": null,
+    "expected_attempts": 1,
+    "expected_error": null,
+    "write": "none"
+  },
+  {
+    "name": "unsupported",
+    "category": "insufficient_evidence",
+    "request": {
+      "question": "What is the lunar telescope calibration frequency?"
+    },
+    "expected_state": "abstained",
+    "expected_systems": [
+      "customer",
+      "order",
+      "tickets",
+      "policy"
+    ],
+    "expected_documents": [],
+    "expected_fact": null,
+    "expected_attempts": 1,
+    "expected_error": null,
+    "write": "none"
+  },
+  {
+    "name": "restricted-region",
+    "category": "restricted_action",
+    "request": {
+      "customer_id": "C019",
+      "order_id": "O118"
+    },
+    "expected_state": "restricted",
+    "expected_systems": [
+      "customer"
+    ],
+    "expected_documents": [],
+    "expected_fact": null,
+    "expected_attempts": null,
+    "expected_error": null,
+    "write": "none"
+  },
+  {
+    "name": "wrong-customer-order",
+    "category": "restricted_action",
+    "request": {
+      "order_id": "O101"
+    },
+    "expected_state": "restricted",
+    "expected_systems": [
+      "customer",
+      "order"
+    ],
+    "expected_documents": [],
+    "expected_fact": null,
+    "expected_attempts": null,
+    "expected_error": null,
+    "write": "none"
+  },
+  {
+    "name": "approved-ticket",
+    "category": "approved_write",
+    "request": {},
+    "expected_state": "executed",
+    "expected_systems": [
+      "customer",
+      "order",
+      "tickets",
+      "policy"
+    ],
+    "expected_documents": [
+      "returns-current"
+    ],
+    "expected_fact": "30 days",
+    "expected_attempts": 1,
+    "expected_error": null,
+    "write": "approved"
+  },
+  {
+    "name": "unapproved-ticket",
+    "category": "unapproved_write",
+    "request": {},
+    "expected_state": "rejected",
+    "expected_systems": [
+      "customer",
+      "order",
+      "tickets",
+      "policy"
+    ],
+    "expected_documents": [],
+    "expected_fact": "30 days",
+    "expected_attempts": 1,
+    "expected_error": null,
+    "write": "unapproved"
+  },
+  {
+    "name": "duplicate-ticket",
+    "category": "duplicate_write",
+    "request": {},
+    "expected_state": "executed",
+    "expected_systems": [
+      "customer",
+      "order",
+      "tickets",
+      "policy"
+    ],
+    "expected_documents": [],
+    "expected_fact": "30 days",
+    "expected_attempts": 1,
+    "expected_error": null,
+    "write": "duplicate"
+  },
+  {
+    "name": "ticket-outage",
+    "category": "dependency_failure",
+    "request": {},
+    "expected_state": "rejected",
+    "expected_systems": [
+      "customer",
+      "order",
+      "tickets",
+      "policy"
+    ],
+    "expected_documents": [],
+    "expected_fact": "30 days",
+    "expected_attempts": 1,
+    "expected_error": null,
+    "write": "failure"
+  },
+  {
+    "name": "timeout-recovery",
+    "category": "retryable_failure",
+    "request": {
+      "fault": "order_timeout"
+    },
+    "expected_state": "drafted",
+    "expected_systems": [
+      "customer",
+      "order",
+      "tickets",
+      "policy"
+    ],
+    "expected_documents": [],
+    "expected_fact": "30 days",
+    "expected_attempts": 2,
+    "expected_error": null,
+    "write": "none"
+  },
+  {
+    "name": "rate-limit-recovery",
+    "category": "retryable_failure",
+    "request": {
+      "fault": "order_429"
+    },
+    "expected_state": "drafted",
+    "expected_systems": [
+      "customer",
+      "order",
+      "tickets",
+      "policy"
+    ],
+    "expected_documents": [],
+    "expected_fact": "30 days",
+    "expected_attempts": 2,
+    "expected_error": null,
+    "write": "none"
+  },
+  {
+    "name": "order-outage",
+    "category": "dependency_failure",
+    "request": {
+      "fault": "order_unavailable"
+    },
+    "expected_state": "degraded",
+    "expected_systems": [
+      "customer",
+      "order"
+    ],
+    "expected_documents": [],
+    "expected_fact": null,
+    "expected_attempts": 3,
+    "expected_error": "http_500",
+    "write": "none"
+  },
+  {
+    "name": "policy-outage",
+    "category": "dependency_failure",
+    "request": {
+      "fault": "policy_unavailable"
+    },
+    "expected_state": "degraded",
+    "expected_systems": [
+      "customer",
+      "order",
+      "tickets",
+      "policy"
+    ],
+    "expected_documents": [],
+    "expected_fact": null,
+    "expected_attempts": 1,
+    "expected_error": null,
+    "write": "none"
+  },
+  {
+    "name": "bad-customer",
+    "category": "nonretryable_failure",
+    "request": {
+      "fault": "malformed_customer"
+    },
+    "expected_state": "abstained",
+    "expected_systems": [
+      "customer"
+    ],
+    "expected_documents": [],
+    "expected_fact": null,
+    "expected_attempts": null,
+    "expected_error": null,
+    "write": "none"
+  },
+  {
+    "name": "bad-order",
+    "category": "nonretryable_failure",
+    "request": {
+      "customer_id": "C010",
+      "order_id": "O149"
+    },
+    "expected_state": "degraded",
+    "expected_systems": [
+      "customer",
+      "order"
+    ],
+    "expected_documents": [],
+    "expected_fact": null,
+    "expected_attempts": 1,
+    "expected_error": "invalid_response",
+    "write": "none"
+  }
+]

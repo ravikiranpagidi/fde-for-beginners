@@ -22,7 +22,23 @@ Copy this page into your personal notes. Record evidence and feedback, not just 
 - [ ] One [ADR](../../templates/architecture-decision-record.md) completed.
 - [ ] One [readiness checklist](../../templates/production-readiness-checklist.md) completed with limitations.
 
-The integrated Northstar project and Atlas engagement/incident artifacts remain deferred to Phase 3. This tracker does not certify production experience.
+## Phase 3 field evidence
+
+- [ ] Completed the Northstar evidence-to-ticket workflow.
+- [ ] Demonstrated safe degraded behavior for a dependency failure.
+- [ ] Produced and analyzed the generated Northstar evaluation report.
+- [ ] Demonstrated rejection of an unauthorized write and one effect for a repeated action.
+- [ ] Saved Atlas discovery questions and revised assumptions after the reveal.
+- [ ] Produced Atlas scope, design, ADR, and a scope-change response.
+- [ ] Responded to the incident using evidence and labeled hypotheses.
+- [ ] Produced the engineering incident update.
+- [ ] Produced the executive incident update with consistent facts.
+- [ ] Completed the handoff checklist and recorded independent operator evidence or its absence.
+- [ ] Completed the [productization analysis](../field/productization.md).
+- [ ] Reviewed all categories in the [field-readiness rubric](field-readiness-rubric.md).
+- [ ] Assembled the FDE Evidence Pack and recorded next exercises for remaining gaps.
+
+This tracker does not certify production experience.
 
 ## Record one decision
 

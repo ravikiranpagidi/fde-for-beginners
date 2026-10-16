@@ -1,0 +1,841 @@
+{
+  "synthetic": true,
+  "as_of": "2026-10-01",
+  "customers": {
+    "C001": {
+      "customer_id": "C001",
+      "name": "Synthetic Customer 01",
+      "audience": "retail",
+      "region": "US"
+    },
+    "C002": {
+      "customer_id": "C002",
+      "name": "Synthetic Customer 02",
+      "audience": "retail",
+      "region": "US"
+    },
+    "C003": {
+      "customer_id": "C003",
+      "name": "Synthetic Customer 03",
+      "audience": "retail",
+      "region": "US"
+    },
+    "C004": {
+      "customer_id": "C004",
+      "name": "Synthetic Customer 04",
+      "audience": "business",
+      "region": "US"
+    },
+    "C005": {
+      "customer_id": "C005",
+      "name": "Synthetic Customer 05",
+      "audience": "retail",
+      "region": "US"
+    },
+    "C006": {
+      "customer_id": "C006",
+      "name": "Synthetic Customer 06",
+      "audience": "retail",
+      "region": "US"
+    },
+    "C007": {
+      "customer_id": "C007",
+      "name": "Synthetic Customer 07",
+      "audience": "retail",
+      "region": "US"
+    },
+    "C008": {
+      "customer_id": "C008",
+      "name": "Synthetic Customer 08",
+      "audience": "business",
+      "region": "US"
+    },
+    "C009": {
+      "customer_id": "C009",
+      "name": "Synthetic Customer 09",
+      "audience": "retail",
+      "region": "US"
+    },
+    "C010": {
+      "customer_id": "C010",
+      "name": "Synthetic Customer 10",
+      "audience": "retail",
+      "region": "US"
+    },
+    "C011": {
+      "customer_id": "C011",
+      "name": "Synthetic Customer 11",
+      "audience": "retail",
+      "region": "US"
+    },
+    "C012": {
+      "customer_id": "C012",
+      "name": "Synthetic Customer 12",
+      "audience": "business",
+      "region": "US"
+    },
+    "C013": {
+      "customer_id": "C013",
+      "name": "Synthetic Customer 13",
+      "audience": "retail",
+      "region": "US"
+    },
+    "C014": {
+      "customer_id": "C014",
+      "name": "Synthetic Customer 14",
+      "audience": "retail",
+      "region": "US"
+    },
+    "C015": {
+      "customer_id": "C015",
+      "name": "Synthetic Customer 15",
+      "audience": "retail",
+      "region": "US"
+    },
+    "C016": {
+      "customer_id": "C016",
+      "name": "Synthetic Customer 16",
+      "audience": "business",
+      "region": "US"
+    },
+    "C017": {
+      "customer_id": "C017",
+      "name": "Synthetic Customer 17",
+      "audience": "retail",
+      "region": "US"
+    },
+    "C018": {
+      "customer_id": "C018",
+      "name": "Synthetic Customer 18",
+      "audience": "unknown",
+      "region": "US"
+    },
+    "C019": {
+      "customer_id": "C019",
+      "name": "Synthetic Customer 19",
+      "audience": "retail",
+      "region": "EU"
+    },
+    "C020": {
+      "customer_id": "C020",
+      "audience": "business",
+      "region": "US"
+    }
+  },
+  "orders": {
+    "O100": {
+      "order_id": "O100",
+      "customer_id": "C001",
+      "status": "delivered",
+      "quantity": 1
+    },
+    "O101": {
+      "order_id": "O101",
+      "customer_id": "C002",
+      "status": "shipped",
+      "quantity": 2
+    },
+    "O102": {
+      "order_id": "O102",
+      "customer_id": "C003",
+      "status": "pending",
+      "quantity": 3
+    },
+    "O103": {
+      "order_id": "O103",
+      "customer_id": "C004",
+      "status": "cancelled",
+      "quantity": 1
+    },
+    "O104": {
+      "order_id": "O104",
+      "customer_id": "C005",
+      "status": "returned",
+      "quantity": 2
+    },
+    "O105": {
+      "order_id": "O105",
+      "customer_id": "C006",
+      "status": "delivered",
+      "quantity": 3
+    },
+    "O106": {
+      "order_id": "O106",
+      "customer_id": "C007",
+      "status": "shipped",
+      "quantity": 1
+    },
+    "O107": {
+      "order_id": "O107",
+      "customer_id": "C008",
+      "status": "pending",
+      "quantity": 2
+    },
+    "O108": {
+      "order_id": "O108",
+      "customer_id": "C009",
+      "status": "cancelled",
+      "quantity": 3
+    },
+    "O109": {
+      "order_id": "O109",
+      "customer_id": "C010",
+      "status": "returned",
+      "quantity": 1
+    },
+    "O110": {
+      "order_id": "O110",
+      "customer_id": "C011",
+      "status": "delivered",
+      "quantity": 2
+    },
+    "O111": {
+      "order_id": "O111",
+      "customer_id": "C012",
+      "status": "shipped",
+      "quantity": 3
+    },
+    "O112": {
+      "order_id": "O112",
+      "customer_id": "C013",
+      "status": "pending",
+      "quantity": 1
+    },
+    "O113": {
+      "order_id": "O113",
+      "customer_id": "C014",
+      "status": "cancelled",
+      "quantity": 2
+    },
+    "O114": {
+      "order_id": "O114",
+      "customer_id": "C015",
+      "status": "returned",
+      "quantity": 3
+    },
+    "O115": {
+      "order_id": "O115",
+      "customer_id": "C016",
+      "status": "delivered",
+      "quantity": 1
+    },
+    "O116": {
+      "order_id": "O116",
+      "customer_id": "C017",
+      "status": "shipped",
+      "quantity": 2
+    },
+    "O117": {
+      "order_id": "O117",
+      "customer_id": "C018",
+      "status": "pending",
+      "quantity": 3
+    },
+    "O118": {
+      "order_id": "O118",
+      "customer_id": "C019",
+      "status": "cancelled",
+      "quantity": 1
+    },
+    "O119": {
+      "order_id": "O119",
+      "customer_id": "C020",
+      "status": "returned",
+      "quantity": 2
+    },
+    "O120": {
+      "order_id": "O120",
+      "customer_id": "C001",
+      "status": "delivered",
+      "quantity": 3
+    },
+    "O121": {
+      "order_id": "O121",
+      "customer_id": "C002",
+      "status": "shipped",
+      "quantity": 1
+    },
+    "O122": {
+      "order_id": "O122",
+      "customer_id": "C003",
+      "status": "pending",
+      "quantity": 2
+    },
+    "O123": {
+      "order_id": "O123",
+      "customer_id": "C004",
+      "status": "cancelled",
+      "quantity": 3
+    },
+    "O124": {
+      "order_id": "O124",
+      "customer_id": "C005",
+      "status": "returned",
+      "quantity": 1
+    },
+    "O125": {
+      "order_id": "O125",
+      "customer_id": "C006",
+      "status": "delivered",
+      "quantity": 2
+    },
+    "O126": {
+      "order_id": "O126",
+      "customer_id": "C007",
+      "status": "shipped",
+      "quantity": 3
+    },
+    "O127": {
+      "order_id": "O127",
+      "customer_id": "C008",
+      "status": "pending",
+      "quantity": 1
+    },
+    "O128": {
+      "order_id": "O128",
+      "customer_id": "C009",
+      "status": "cancelled",
+      "quantity": 2
+    },
+    "O129": {
+      "order_id": "O129",
+      "customer_id": "C010",
+      "status": "returned",
+      "quantity": 3
+    },
+    "O130": {
+      "order_id": "O130",
+      "customer_id": "C011",
+      "status": "delivered",
+      "quantity": 1
+    },
+    "O131": {
+      "order_id": "O131",
+      "customer_id": "C012",
+      "status": "shipped",
+      "quantity": 2
+    },
+    "O132": {
+      "order_id": "O132",
+      "customer_id": "C013",
+      "status": "pending",
+      "quantity": 3
+    },
+    "O133": {
+      "order_id": "O133",
+      "customer_id": "C014",
+      "status": "cancelled",
+      "quantity": 1
+    },
+    "O134": {
+      "order_id": "O134",
+      "customer_id": "C015",
+      "status": "returned",
+      "quantity": 2
+    },
+    "O135": {
+      "order_id": "O135",
+      "customer_id": "C016",
+      "status": "delivered",
+      "quantity": 3
+    },
+    "O136": {
+      "order_id": "O136",
+      "customer_id": "C017",
+      "status": "shipped",
+      "quantity": 1
+    },
+    "O137": {
+      "order_id": "O137",
+      "customer_id": "C018",
+      "status": "pending",
+      "quantity": 2
+    },
+    "O138": {
+      "order_id": "O138",
+      "customer_id": "C019",
+      "status": "cancelled",
+      "quantity": 3
+    },
+    "O139": {
+      "order_id": "O139",
+      "customer_id": "C020",
+      "status": "returned",
+      "quantity": 1
+    },
+    "O140": {
+      "order_id": "O140",
+      "customer_id": "C001",
+      "status": "delivered",
+      "quantity": 2
+    },
+    "O141": {
+      "order_id": "O141",
+      "customer_id": "C002",
+      "status": "shipped",
+      "quantity": 3
+    },
+    "O142": {
+      "order_id": "O142",
+      "customer_id": "C003",
+      "status": "pending",
+      "quantity": 1
+    },
+    "O143": {
+      "order_id": "O143",
+      "customer_id": "C004",
+      "status": "cancelled",
+      "quantity": 2
+    },
+    "O144": {
+      "order_id": "O144",
+      "customer_id": "C005",
+      "status": "returned",
+      "quantity": 3
+    },
+    "O145": {
+      "order_id": "O145",
+      "customer_id": "C006",
+      "status": "delivered",
+      "quantity": 1
+    },
+    "O146": {
+      "order_id": "O146",
+      "customer_id": "C007",
+      "status": "shipped",
+      "quantity": 2
+    },
+    "O147": {
+      "order_id": "O147",
+      "customer_id": "C008",
+      "status": "pending",
+      "quantity": 3
+    },
+    "O148": {
+      "order_id": "O148",
+      "customer_id": "C009",
+      "status": "cancelled",
+      "quantity": 1
+    },
+    "O149": {
+      "order_id": "O149",
+      "customer_id": "C010",
+      "status": "returned",
+      "quantity": "invalid"
+    }
+  },
+  "order_details": {
+    "O100": {
+      "placed_at": "2026-07-01",
+      "delivered_at": "2026-09-01",
+      "condition": "opened"
+    },
+    "O101": {
+      "placed_at": "2026-08-02",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O102": {
+      "placed_at": "2026-09-03",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O103": {
+      "placed_at": "2026-07-04",
+      "delivered_at": null,
+      "condition": "opened"
+    },
+    "O104": {
+      "placed_at": "2026-08-05",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O105": {
+      "placed_at": "2026-09-06",
+      "delivered_at": "2026-09-06",
+      "condition": "unopened"
+    },
+    "O106": {
+      "placed_at": "2026-07-07",
+      "delivered_at": null,
+      "condition": "opened"
+    },
+    "O107": {
+      "placed_at": "2026-08-08",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O108": {
+      "placed_at": "2026-09-09",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O109": {
+      "placed_at": "2026-07-10",
+      "delivered_at": null,
+      "condition": "opened"
+    },
+    "O110": {
+      "placed_at": "2026-08-11",
+      "delivered_at": "2026-09-11",
+      "condition": "unopened"
+    },
+    "O111": {
+      "placed_at": "2026-09-12",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O112": {
+      "placed_at": "2026-07-13",
+      "delivered_at": null,
+      "condition": "opened"
+    },
+    "O113": {
+      "placed_at": "2026-08-14",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O114": {
+      "placed_at": "2026-09-15",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O115": {
+      "placed_at": "2026-07-16",
+      "delivered_at": "2026-09-16",
+      "condition": "opened"
+    },
+    "O116": {
+      "placed_at": "2026-08-17",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O117": {
+      "placed_at": "2026-09-18",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O118": {
+      "placed_at": "2026-07-19",
+      "delivered_at": null,
+      "condition": "opened"
+    },
+    "O119": {
+      "placed_at": "2026-08-20",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O120": {
+      "placed_at": "2026-09-21",
+      "delivered_at": "2026-09-21",
+      "condition": "unopened"
+    },
+    "O121": {
+      "placed_at": "2026-07-22",
+      "delivered_at": null,
+      "condition": "opened"
+    },
+    "O122": {
+      "placed_at": "2026-08-23",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O123": {
+      "placed_at": "2026-09-24",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O124": {
+      "placed_at": "2026-07-25",
+      "delivered_at": null,
+      "condition": "opened"
+    },
+    "O125": {
+      "placed_at": "2026-08-26",
+      "delivered_at": "2026-09-26",
+      "condition": "unopened"
+    },
+    "O126": {
+      "placed_at": "2026-09-27",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O127": {
+      "placed_at": "2026-07-28",
+      "delivered_at": null,
+      "condition": "opened"
+    },
+    "O128": {
+      "placed_at": "2026-08-01",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O129": {
+      "placed_at": "2026-09-02",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O130": {
+      "placed_at": "2026-07-03",
+      "delivered_at": "2026-09-03",
+      "condition": "opened"
+    },
+    "O131": {
+      "placed_at": "2026-08-04",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O132": {
+      "placed_at": "2026-09-05",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O133": {
+      "placed_at": "2026-07-06",
+      "delivered_at": null,
+      "condition": "opened"
+    },
+    "O134": {
+      "placed_at": "2026-08-07",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O135": {
+      "placed_at": "2026-09-08",
+      "delivered_at": "2026-09-08",
+      "condition": "unopened"
+    },
+    "O136": {
+      "placed_at": "2026-07-09",
+      "delivered_at": null,
+      "condition": "opened"
+    },
+    "O137": {
+      "placed_at": "2026-08-10",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O138": {
+      "placed_at": "2026-09-11",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O139": {
+      "placed_at": "2026-07-12",
+      "delivered_at": null,
+      "condition": "opened"
+    },
+    "O140": {
+      "placed_at": "2026-08-13",
+      "delivered_at": "2026-09-13",
+      "condition": "unopened"
+    },
+    "O141": {
+      "placed_at": "2026-09-14",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O142": {
+      "placed_at": "2026-07-15",
+      "delivered_at": null,
+      "condition": "opened"
+    },
+    "O143": {
+      "placed_at": "2026-08-16",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O144": {
+      "placed_at": "2026-09-17",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O145": {
+      "placed_at": "2026-07-18",
+      "delivered_at": "2026-09-18",
+      "condition": "opened"
+    },
+    "O146": {
+      "placed_at": "2026-08-19",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O147": {
+      "placed_at": "2026-09-20",
+      "delivered_at": null,
+      "condition": "unopened"
+    },
+    "O148": {
+      "placed_at": "2026-07-21",
+      "delivered_at": null,
+      "condition": "opened"
+    },
+    "O149": {
+      "placed_at": "2026-08-22",
+      "delivered_at": null,
+      "condition": "unopened"
+    }
+  },
+  "tickets": [
+    {
+      "ticket_id": "H001",
+      "customer_id": "C001",
+      "order_id": "O100",
+      "status": "resolved",
+      "created_at": "2026-09-01",
+      "summary": "Synthetic delivery question"
+    },
+    {
+      "ticket_id": "H002",
+      "customer_id": "C002",
+      "order_id": "O101",
+      "status": "escalated",
+      "created_at": "2026-09-02",
+      "summary": "Synthetic delivery question"
+    },
+    {
+      "ticket_id": "H003",
+      "customer_id": "C003",
+      "order_id": "O102",
+      "status": "open",
+      "created_at": "2026-09-03",
+      "summary": "Synthetic exception review; supervisor required"
+    },
+    {
+      "ticket_id": "H004",
+      "customer_id": "C004",
+      "order_id": "O103",
+      "status": "resolved",
+      "created_at": "2026-09-04",
+      "summary": "Synthetic delivery question"
+    },
+    {
+      "ticket_id": "H005",
+      "customer_id": "C005",
+      "order_id": "O104",
+      "status": "escalated",
+      "created_at": "2026-09-05",
+      "summary": "Synthetic delivery question"
+    },
+    {
+      "ticket_id": "H006",
+      "customer_id": "C006",
+      "order_id": "O105",
+      "status": "open",
+      "created_at": "2026-09-06",
+      "summary": "Synthetic exception review; supervisor required"
+    },
+    {
+      "ticket_id": "H007",
+      "customer_id": "C007",
+      "order_id": "O106",
+      "status": "resolved",
+      "created_at": "2026-09-07",
+      "summary": "Synthetic delivery question"
+    },
+    {
+      "ticket_id": "H008",
+      "customer_id": "C008",
+      "order_id": "O107",
+      "status": "escalated",
+      "created_at": "2026-09-08",
+      "summary": "Synthetic delivery question"
+    },
+    {
+      "ticket_id": "H009",
+      "customer_id": "C009",
+      "order_id": "O108",
+      "status": "open",
+      "created_at": "2026-09-09",
+      "summary": "Synthetic exception review; supervisor required"
+    },
+    {
+      "ticket_id": "H010",
+      "customer_id": "C010",
+      "order_id": "O109",
+      "status": "resolved",
+      "created_at": "2026-09-10",
+      "summary": "Synthetic delivery question"
+    },
+    {
+      "ticket_id": "H011",
+      "customer_id": "C011",
+      "order_id": "O110",
+      "status": "escalated",
+      "created_at": "2026-09-11",
+      "summary": "Synthetic delivery question"
+    },
+    {
+      "ticket_id": "H012",
+      "customer_id": "C012",
+      "order_id": "O111",
+      "status": "open",
+      "created_at": "2026-09-12",
+      "summary": "Synthetic exception review; supervisor required"
+    },
+    {
+      "ticket_id": "H013",
+      "customer_id": "C013",
+      "order_id": "O112",
+      "status": "resolved",
+      "created_at": "2026-09-13",
+      "summary": "Synthetic delivery question"
+    },
+    {
+      "ticket_id": "H014",
+      "customer_id": "C014",
+      "order_id": "O113",
+      "status": "escalated",
+      "created_at": "2026-09-14",
+      "summary": "Synthetic delivery question"
+    },
+    {
+      "ticket_id": "H015",
+      "customer_id": "C015",
+      "order_id": "O114",
+      "status": "open",
+      "created_at": "2026-09-15",
+      "summary": "Synthetic exception review; supervisor required"
+    },
+    {
+      "ticket_id": "H016",
+      "customer_id": "C016",
+      "order_id": "O115",
+      "status": "resolved",
+      "created_at": "2026-09-16",
+      "summary": "Synthetic delivery question"
+    },
+    {
+      "ticket_id": "H017",
+      "customer_id": "C017",
+      "order_id": "O116",
+      "status": "escalated",
+      "created_at": "2026-09-17",
+      "summary": "Synthetic delivery question"
+    },
+    {
+      "ticket_id": "H018",
+      "customer_id": "C018",
+      "order_id": "O117",
+      "status": "open",
+      "created_at": "2026-09-18",
+      "summary": "Synthetic exception review; supervisor required"
+    },
+    {
+      "ticket_id": "H019",
+      "customer_id": "C019",
+      "order_id": "O118",
+      "status": "resolved",
+      "created_at": "2026-09-19",
+      "summary": "Synthetic delivery question"
+    },
+    {
+      "ticket_id": "H020",
+      "customer_id": "C020",
+      "order_id": "O119",
+      "status": "escalated",
+      "created_at": "2026-09-20",
+      "summary": "Synthetic delivery question"
+    }
+  ]
+}

@@ -21,6 +21,8 @@ def authored_pages() -> list[Path]:
             *(ROOT / "docs").rglob("*.md"),
             *(ROOT / "labs").rglob("*.md"),
             *(ROOT / "templates").rglob("*.md"),
+            *(ROOT / "project").rglob("*.md"),
+            *(ROOT / "simulation").rglob("*.md"),
             *(ROOT / ".github").rglob("*.md"),
         ]
     )
@@ -54,7 +56,7 @@ def test_source_links_resolve_inside_repository() -> None:
 
 def test_authored_text_avoids_forbidden_dashes() -> None:
     paths = authored_pages()
-    for directory in ("src", "scripts", "tests", ".github", "labs"):
+    for directory in ("src", "scripts", "tests", ".github", "labs", "project", "simulation"):
         paths.extend(
             path
             for path in (ROOT / directory).rglob("*")

@@ -15,6 +15,7 @@ class TicketRequest(BaseModel):
     model_config = ConfigDict(strict=True, extra="forbid", str_strip_whitespace=True)
     customer_id: str = Field(pattern=r"^C[0-9]{3}$")
     summary: str = Field(min_length=5, max_length=200)
+    action_id: str | None = Field(default=None, pattern=r"^[a-zA-Z0-9_-]{1,80}$")
 
 
 class ApprovalRequired(ValueError):
@@ -37,6 +38,9 @@ class ApprovalStore:
                 );
                 CREATE TABLE IF NOT EXISTS tickets (
                     id INTEGER PRIMARY KEY, payload TEXT NOT NULL
+                );
+                CREATE TABLE IF NOT EXISTS ticket_actions (
+                    action_id TEXT PRIMARY KEY, payload TEXT NOT NULL, ticket_id TEXT NOT NULL
                 );
             """)
 
@@ -69,11 +73,27 @@ class ApprovalStore:
             ).fetchone()
             if not row or row[0] != request.model_dump_json() or row[1] <= time.time() or row[2]:
                 raise ApprovalRequired("Approval invalid, expired, consumed, or for another action")
+            if request.action_id:
+                previous = connection.execute(
+                    "SELECT payload, ticket_id FROM ticket_actions WHERE action_id = ?",
+                    (request.action_id,),
+                ).fetchone()
+                if previous:
+                    if previous[0] != row[0]:
+                        raise ApprovalRequired("Action ID already bound to different payload")
+                    connection.execute("UPDATE approvals SET used = 1 WHERE digest = ?", (digest,))
+                    return {"ticket_id": previous[1], "status": "existing"}
             if fail:
                 raise DownstreamFailure("Ticket store unavailable; no effect committed")
             cursor = connection.execute("INSERT INTO tickets(payload) VALUES (?)", (row[0],))
+            ticket_id = f"T{cursor.lastrowid:03}"
+            if request.action_id:
+                connection.execute(
+                    "INSERT INTO ticket_actions VALUES (?, ?, ?)",
+                    (request.action_id, row[0], ticket_id),
+                )
             connection.execute("UPDATE approvals SET used = 1 WHERE digest = ?", (digest,))
-            return {"ticket_id": f"T{cursor.lastrowid:03}", "status": "created"}
+            return {"ticket_id": ticket_id, "status": "created"}
 
     def ticket_count(self) -> int:
         with self.connect() as connection:

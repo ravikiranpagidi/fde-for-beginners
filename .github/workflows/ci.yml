@@ -23,4 +23,5 @@ jobs:
       - run: uv run --offline ruff check .
       - run: uv run --offline ruff format --check .
       - run: uv run --offline pytest
+      - run: uv run --offline fde-northstar evaluate
       - run: uv run --offline mkdocs build --strict

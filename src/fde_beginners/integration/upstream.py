@@ -10,7 +10,8 @@ from fde_beginners.common.data import ORDERS
 from fde_beginners.integration.models import FailureMode, Reservation, ReservationRequest
 
 
-def create_app() -> FastAPI:
+def create_app(orders: dict | None = None) -> FastAPI:
+    orders = ORDERS if orders is None else orders
     app = FastAPI(title="Northstar synthetic upstream")
     app.state.reservations = {}
     app.state.lock = asyncio.Lock()
@@ -42,9 +43,9 @@ def create_app() -> FastAPI:
         fault = await inject(mode, x_attempt, failures)
         if fault is not None:
             return fault
-        if order_id not in ORDERS:
+        if order_id not in orders:
             raise HTTPException(404, "Order not found")
-        return ORDERS[order_id]
+        return orders[order_id]
 
     @app.post("/reservations", response_model=None)
     async def reserve(
@@ -54,7 +55,7 @@ def create_app() -> FastAPI:
         failures: int = 1,
         x_attempt: Annotated[int, Header(ge=1)] = 1,
     ) -> dict | JSONResponse:
-        if payload.order_id not in ORDERS:
+        if payload.order_id not in orders:
             raise HTTPException(404, "Order not found")
         fault = await inject(mode, x_attempt, failures)
         if fault is not None:

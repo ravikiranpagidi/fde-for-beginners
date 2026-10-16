@@ -23,6 +23,7 @@ class OrderClient:
         sleep: Callable[[float], None] = time.sleep,
     ) -> None:
         self.http, self.policy, self.sleep = http, policy or RetryPolicy(), sleep
+        self.last_attempts = 0
 
     def _request(
         self,
@@ -35,6 +36,7 @@ class OrderClient:
         key: str | None = None,
     ) -> ResponseT:
         for attempt in range(1, self.policy.attempts + 1):
+            self.last_attempts = attempt
             headers = {"X-Attempt": str(attempt)}
             if key is not None:
                 headers["Idempotency-Key"] = key
